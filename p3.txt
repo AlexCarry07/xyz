@@ -1306,3 +1306,190 @@ Prim’s Algorithm is called a greedy algorithm because it chooses the minimum e
 
 
 
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+class JobScheduling {
+
+    public static void main(String args[]) {
+
+        // Job profits
+        int profit[] = {100, 19, 27, 25, 15};
+
+        // Job deadlines
+        int deadline[] = {2, 1, 2, 1, 3};
+
+        // Job names
+        char job[] = {'A', 'B', 'C', 'D', 'E'};
+
+        int n = profit.length;
+
+        // Sort jobs by profit
+        for (int i = 0; i < n - 1; i++) {
+
+            for (int j = i + 1; j < n; j++) {
+
+                // Compare profits
+                if (profit[i] < profit[j]) {
+
+                    // Swap profits
+                    int temp = profit[i];
+                    profit[i] = profit[j];
+                    profit[j] = temp;
+
+                    // Swap deadlines
+                    temp = deadline[i];
+                    deadline[i] = deadline[j];
+                    deadline[j] = temp;
+
+                    // Swap job names
+                    char t = job[i];
+                    job[i] = job[j];
+                    job[j] = t;
+                }
+            }
+        }
+
+        // Track filled slots
+        boolean slot[] = new boolean[n];
+
+        // Store selected jobs
+        char result[] = new char[n];
+
+        // Schedule jobs
+        for (int i = 0; i < n; i++) {
+
+            // Find free slot
+            for (int j = Math.min(n, deadline[i]) - 1; j >= 0; j--) {
+
+                // Assign job if slot free
+                if (slot[j] == false) {
+
+                    slot[j] = true;
+                    result[j] = job[i];
+                    break;
+                }
+            }
+        }
+
+        System.out.print("Selected Jobs : ");
+
+        // Print selected jobs
+        for (int i = 0; i < n; i++) {
+
+            if (slot[i]) {
+                System.out.print(result[i] + " ");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Job Scheduling Problem – Simple Explanation
+The program is used to schedule jobs to get maximum profit.
+Each job has:
+Job ID
+Deadline
+Profit
+Arrays are used to store profits, deadlines, and job names.
+The jobs are sorted in decreasing order of profit.
+The job with highest profit is considered first.
+A slot array is used to check whether a time slot is free or occupied.
+The algorithm tries to place each job before its deadline.
+If a free slot is available, the job is assigned to that slot.
+If no slot is available, the job is skipped.
+The process continues until all jobs are checked.
+Finally, the selected jobs are printed.
+The main aim is to maximize total profit.
+It is called a greedy algorithm because it selects the highest profit job first at every step.
+
+
+
+
+
+
+
+
+
+
+
+
+
