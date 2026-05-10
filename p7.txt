@@ -1,0 +1,84 @@
+public class Calculator {
+
+    public static void Cal() {
+
+        Integer a = 40;
+        Integer b = 20;
+
+        Integer sum = a + b;
+        Integer sub = a - b;
+
+        System.debug('Sum = ' + sum);
+        System.debug('Sub = ' + sub);
+    }
+}
+
+
+
+
+
+
+Calculator.Cal();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Login to Salesforce
+Open Setup
+Click ⚙️ icon → Setup
+Search Apex Classes in setup search box
+Click Apex Classes
+Click New
+Write the Apex code:  the calculator code 
+
+Click Save
+Open Developer Console
+Click ⚙️ → Developer Console
+Click Debug → Open Execute Anonymous Window
+Write:
+Calculator.Cal();
+Click Execute
+Check output in Logs
+You will see:
+Sum = 60
+Sub = 20
