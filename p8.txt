@@ -62,10 +62,10 @@ public class StudentApp {
 
         Student__c s = new Student__c();
 
-        s.Name = 'Kartik';
+        s.Name = 'Yash';
         s.Age__c = 20;
         s.Course__c = 'Computer Engineering';
-        s.Email__c = 'kartik@gmail.com';
+        s.Email__c = 'Yash@gmail.com';
 
         insert s;
 
