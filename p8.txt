@@ -1,0 +1,131 @@
+Student Management System in Salesforce
+Step 1: Login to Salesforce
+Open Salesforce
+Login using your account
+
+
+Step 2: Open Setup
+Click ⚙️ (Gear Icon) at top-right
+Click Setup
+
+
+Step 3: Create Custom Object
+In Setup Search box, type Object Manager
+Open Object Manager
+Click Create → Custom Object
+Enter Details
+Label → Student
+Plural Label → Students
+Object Name → Student
+Click Save
+
+
+Step 4: Create Fields
+Inside Student object:
+
+Click Fields & Relationships
+Click New
+
+Create these fields:
+
+Field Name	Data Type
+Age	Number
+Course	Text
+Email	Email
+Click Save after creating each field
+
+
+Step 5: Create Tab for Student Object
+In Setup Search, type Tabs
+Open Tabs
+In Custom Object Tabs, click New
+Select
+Object → Student
+Choose any tab style
+Click Next → Next → Save
+
+
+Step 6: Open Developer Console
+Click ⚙️ (Gear Icon)
+Click Developer Console
+
+
+Step 7: Create Apex Class
+Click File → New → Apex Class
+Class Name → StudentApp
+
+Paste this code:
+
+public class StudentApp {
+
+    public static void addStudent() {
+
+        Student__c s = new Student__c();
+
+        s.Name = 'Kartik';
+        s.Age__c = 20;
+        s.Course__c = 'Computer Engineering';
+        s.Email__c = 'kartik@gmail.com';
+
+        insert s;
+
+        System.debug('Student Added Successfully');
+    }
+}
+
+Click Save
+
+
+Step 8: Run the Application
+Click Debug → Open Execute Anonymous Window
+
+Write:
+
+StudentApp.addStudent();
+
+Click Execute
+
+
+Step 9: Check Output
+Open Logs
+You will see:
+Student Added Successfully
+
+
+Step 10: View Student Record
+Click App Launcher (9 dots icon)
+Search Students
+Open Students
+
+Now you can:
+
+View records
+Add records
+Edit records
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
