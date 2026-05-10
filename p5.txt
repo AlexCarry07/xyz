@@ -1,69 +1,95 @@
-print("===== Welcome to Admission Chatbot =====")
+import java.util.Scanner;
 
-while True:
+public class AdmissionChatbot {
 
-    q = input("\nAsk Question: ")
-    q = q.lower()
+    public static void main(String[] args) {
 
-    if "course" in q:
-        print("Available courses are CSE, IT, AIDS and ECE")
+        Scanner sc = new Scanner(System.in);
 
-    elif "fees" in q:
-        print("Fees is 1,00,000 per year")
+        System.out.println("===== Welcome to Admission Chatbot =====");
 
-    elif "admission" in q:
-        print("Admission is based on entrance exam score")
+        while (true) {
 
-    elif "hostel" in q:
-        print("Hostel facility is available for boys and girls")
+            System.out.print("\nAsk Question: ");
+            String q = sc.nextLine().toLowerCase();
 
-    elif "contact" in q:
-        print("Contact: 9876543210")
+            if (q.contains("course")) {
+                System.out.println("Available courses are CSE, IT, AIDS and ECE");
+            }
 
-    elif "library" in q:
-        print("Library facility is available from 8 AM to 8 PM")
+            else if (q.contains("fees")) {
+                System.out.println("Fees is 1,00,000 per year");
+            }
 
-    elif "placement" in q:
-        print("Top companies visit for placements every year")
+            else if (q.contains("admission")) {
+                System.out.println("Admission is based on entrance exam score");
+            }
 
-    elif "canteen" in q:
-        print("Canteen facility is available inside campus")
+            else if (q.contains("hostel")) {
+                System.out.println("Hostel facility is available for boys and girls");
+            }
 
-    elif "scholarship" in q:
-        print("Scholarships are available for eligible students")
+            else if (q.contains("contact")) {
+                System.out.println("Contact: 9876543210");
+            }
 
-    elif "faculty" in q:
-        print("Experienced and qualified faculty members are available")
+            else if (q.contains("library")) {
+                System.out.println("Library facility is available from 8 AM to 8 PM");
+            }
 
-    elif "exam" in q:
-        print("Exams are conducted semester wise")
+            else if (q.contains("placement")) {
+                System.out.println("Top companies visit for placements every year");
+            }
 
-    elif "timing" in q:
-        print("College timing is 9 AM to 5 PM")
+            else if (q.contains("canteen")) {
+                System.out.println("Canteen facility is available inside campus");
+            }
 
-    elif "location" in q:
-        print("College is located in Pune")
+            else if (q.contains("scholarship")) {
+                System.out.println("Scholarships are available for eligible students");
+            }
 
-    elif "transport" in q:
-        print("Bus transport facility is available")
+            else if (q.contains("faculty")) {
+                System.out.println("Experienced and qualified faculty members are available");
+            }
 
-    elif "wifi" in q:
-        print("Free WiFi facility is available on campus")
+            else if (q.contains("exam")) {
+                System.out.println("Exams are conducted semester wise");
+            }
 
-    elif "sports" in q:
-        print("Sports and gym facilities are available")
+            else if (q.contains("timing")) {
+                System.out.println("College timing is 9 AM to 5 PM");
+            }
 
-    elif "exit" in q:
-        print("Thank You for using Admission Chatbot")
-        break
+            else if (q.contains("location")) {
+                System.out.println("College is located in Pune");
+            }
 
-    else:
-        print("Sorry, I don't understand")
+            else if (q.contains("transport")) {
+                System.out.println("Bus transport facility is available");
+            }
 
+            else if (q.contains("wifi")) {
+                System.out.println("Free WiFi facility is available on campus");
+            }
 
+            else if (q.contains("sports")) {
+                System.out.println("Sports and gym facilities are available");
+            }
 
+            else if (q.contains("exit")) {
+                System.out.println("Thank You for using Admission Chatbot");
+                break;
+            }
 
+            else {
+                System.out.println("Sorry, I don't understand");
+            }
+        }
 
+        sc.close();
+    }
+}
 
 
 
@@ -726,142 +752,88 @@ while True:
 
 
 
+Displays a welcome message for the user
 
 
+Works as a college admission inquiry chatbot
 
 
+Continuously asks the user to enter questions
 
 
+Accepts user input from keyboard
 
 
+Converts input into lowercase for easy checking
 
 
+Checks the question using predefined conditions
 
 
+Gives information about:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This program works like a simple college inquiry chatbot.
-It helps users get information about admission and college facilities.
-First, a welcome message is displayed.
-The chatbot continuously asks the user to enter a question.
-User input is converted into lowercase so the chatbot can understand words easily.
-The chatbot checks the question using different conditions.
-If the question contains words like course, fees, hostel, placement, etc., it gives the related answer.
-It provides information about:
 Courses
+
+
 Fees
+
+
 Admission process
+
+
 Hostel
+
+
 Library
+
+
 Placement
+
+
 Scholarship
+
+
+Faculty
+
+
+Transport
+
+
 WiFi
-Sports and more
-If the chatbot does not understand the question, it shows a default message.
-When the user types “exit”, the chatbot thanks the user and stops execution.
+
+
+Sports etc.
+
+
+
+
+Shows contact information when asked
+
+
+Gives a default reply if question is not understood
+
+
+Stops execution when user types “exit”
+
+
+Uses a loop for continuous interaction
+
+
+Uses conditional statements for decision making
+
+
+It is a rule-based chatbot
+
+
+Used for customer/student interaction applications
+
+
+
+
+
+
+
 
 
 
